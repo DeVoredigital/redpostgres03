@@ -1,8 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using redpostgres03.Models;
 
 namespace redpostgres03.Data
 {
@@ -12,5 +13,7 @@ namespace redpostgres03.Data
             : base(options)
         {
         }
+        public DbSet<redpostgres03.Models.Person> Person { get; set; }
+        public DbSet<redpostgres03.Models.User> User { get; set; }
     }
 }
